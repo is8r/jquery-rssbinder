@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	
+	<title></title>
+	<meta name="author" lang="ja" content="">
+	<meta name="copyright" lang="ja" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<!--include-->
+	<link rel="stylesheet" type="text/css" href="share/css/import.css" media="screen,print" />
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">google.load("jquery", "1.5.2");</script>
+	<script type="text/javascript" src="./share/js/plugin/jquery.rssbinder-1.0.js"></script>
+	<script src="https://www.google.com/jsapi?key=ABQIAAAAIHM8gu1UCR6PbgFsQLzLCRSfujyf3BpAdH0uhGaGmandj7paphTVdCqmYQuDrmNrvxE-mVDdDy95pA" type="text/javascript"></script>
+	
+	<!--dyrect-->
+	<style type="text/css">
+	/* page */
+	h1,
+	h2,
+	h3 {
+		text-align: center;
+		margin: 0 0 0 0;
+		padding: 10px 0 10px 0;
+		border-top: 1px dotted #ddd;
+	}
+	h2 {
+		text-decoration: underline;
+	}
+	/* rssbinder */
+	#feed
+	{
+		width: 500px;
+		margin: 0 auto;
+	}
+	ul.list-feed
+	{
+		_zoom: 1;
+		overflow: hidden;
+	    border-top: 1px dotted #ddd;
+	    border-bottom: 1px dotted #ddd;
+    }
+	ul.list-feed li
+	{
+	    margin-top: -1px;
+	    border-top: 1px dotted #ddd;
+	}
+	ul.list-feed li a
+	{
+		display: block;
+		padding: 10px;
+		font-size: 16px;
+		line-height: 1.8em;
+		text-decoration: none;
+	}
+	ul.list-feed li a:hover
+	{
+		background: #f2f2f2;
+	}
+	ul.list-feed li .date
+	{
+		font-size: 9px;
+		margin: 0 10px 0 0;
+		color: #222;
+		float:left;
+		display: block;
+	}
+	ul.list-feed li .title
+	{
+		overflow:auto;
+		zoom:1;
+	}
+	
+	</style>
+	<script type="text/javascript"><!--
+	$(function() {
+		var urls = [
+			'http://b.hatena.ne.jp/hotentry.rss?mode=general',
+			'http://kyoko-np.net/index.xml',
+			'http://b.hatena.ne.jp/hotentry/knowledge.rss'
+		];
+	  	$('#feed ul.list-feed').rssbinder({
+	  		urls:urls,
+	  		max:20
+	  	});
+	  	
+	});
+	// --></script>
+	
+</head>
+<body>
+
+<h1>jQuery Plugin - rssbinder</h1>
+
+<h2><a href="https://github.com/is8r/jquery-rssbinder" target="_blank">github project page.</a></h2>
+
+<h2><a href="http://hommebrew.com/lab/?p=55" target="_blank">how to use.</a></h2>
+
+<h2>demo</h2>
+
+<div id="feed">
+<ul class="list-feed">
+</ul>
+</div>
+
+<br />
+<br />
+
+</body>
+</html>
