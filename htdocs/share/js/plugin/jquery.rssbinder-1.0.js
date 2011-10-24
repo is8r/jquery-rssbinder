@@ -11,6 +11,74 @@
  * 
  * 
  * @howtouse
+
+//head
+	<!--dyrect-->
+	<style type="text/css">
+	#feed
+	{
+		width: 500px;
+		margin: 0 auto;
+	}
+	ul.list-feed
+	{
+		_zoom: 1;
+		overflow: hidden;
+	    border-top: 1px dotted #ddd;
+	    border-bottom: 1px dotted #ddd;
+    }
+	ul.list-feed li
+	{
+	    margin-top: -1px;
+	    border-top: 1px dotted #ddd;
+	}
+	ul.list-feed li a
+	{
+		display: block;
+		padding: 10px;
+		font-size: 16px;
+		line-height: 1.8em;
+		text-decoration: none;
+	}
+	ul.list-feed li a:hover
+	{
+		background: #f2f2f2;
+	}
+	ul.list-feed li .date
+	{
+		font-size: 9px;
+		margin: 0 10px 0 0;
+		color: #222;
+		float:left;
+		display: block;
+	}
+	ul.list-feed li .title
+	{
+		overflow:auto;
+		zoom:1;
+	}
+	
+	</style>
+	<script type="text/javascript"><!--
+	$(function() {
+		var urls = [
+			'http://b.hatena.ne.jp/hotentry.rss?mode=general',
+			'http://kyoko-np.net/index.xml',
+			'http://b.hatena.ne.jp/hotentry/knowledge.rss'
+		];
+	  	$('#feed ul.list-feed').rssbinder({
+	  		urls:urls,
+	  		max:20
+	  	});
+	  	
+	});
+	// --></script>
+
+//body
+	<div id="feed">
+	<ul class="list-feed">
+	</ul>
+	</div>
  
  * //////////////////////////////////////////////////////////////////////
 */
